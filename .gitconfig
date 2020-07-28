@@ -1,0 +1,31 @@
+[user]
+    name = nelsonprsousa
+    email = nelsonprsousa@gmail.com
+
+[core]
+    editor = '/Applications/Visual Studio Code.app/Contents/MacOS/Electron' -w
+
+[alias]
+    st = status -sb
+    c = commit
+    p = push
+    pfwl = push --force-with-lease
+    a = add -p
+    co = checkout
+    cob = checkout -b
+    amend = commit -a --amend
+    ri = "!f() { git rebase -i head~\"$1\"; }; f"
+    rb = rebase
+    rbc = rebase --continue
+    rba = rebase --abort
+    ac = !git add -A && git commit
+    cm = !git commit -m
+    acm = !git add -A && git commit -m
+    branches = branch -a
+    stashes = stash list
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    wip = !git add -A && git commit -m "WIP" --no-verify
+    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' --no-verify && git reset HEAD~1 --hard
+
+[push]
+    default = current
